@@ -1,0 +1,33 @@
+{
+  "name": "movie-app",
+  "version": "1.0.0",
+  "description": "movie review app",
+  "main": "sever.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Sarah",
+  "license": "MIT",
+  "dependencies": {
+    "antd-data-table": "^1.0.1",
+    "axios": "^0.19.2",
+    "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
+    "config": "^3.3.0",
+    "express": "^4.17.1",
+    "json-web-token": "^3.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "mongoose": "^5.8.3",
+    "react-icons": "^3.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

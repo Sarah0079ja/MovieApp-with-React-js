@@ -32,13 +32,13 @@ mongoose
 
 
  //serve static assets
-if(process.env.NODE_ENV === 'PRODUCTION') {
-  app.use(express.static('client/build')); 
+
+  app.use(express.static(path.join(__dirname, 'client/build'))); 
 
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(_dirname, 'client', 'build', 'index.html')); 
+    res.sendFile(path.join(_dirname+ '/client/build', 'index.html')); 
   });
-}
+
 
 
 const port = process.env.PORT || 5000

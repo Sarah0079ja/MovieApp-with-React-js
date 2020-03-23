@@ -6,7 +6,7 @@ import AppNavbar from './components/AppNavbar';
 import Landing from "./components/Landing";
 
 import MovieDetail from './components/MovieDetail/MovieDetail';
-// import Register from "./components/auth/Register";
+import FavoritePage from "./components/FavoritePage/FavoritePage";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Provider } from "react-redux";
@@ -32,6 +32,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Landing} />
               <Route exact path="/movie/:movieId" component={MovieDetail} />
+              <Route exact path="/favorite" component={FavoritePage} />
             </Switch>
             {/* <Landing /> */}
           </div>

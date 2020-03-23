@@ -1,17 +1,18 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios'
 import {Button} from 'antd'
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
  function Favorite(props) {
 
-       const user = useSelector(state => state.user);
+    //    const user = useSelector(state => state.user);
 
-       const movieId = props.movieId;
-       const userFrom = props.userFrom;
-       const movieTitle = props.movieInfo.title;
-       const moviePost = props.movieInfo.backdrop_path;
-       const movieRunTime = props.movieInfo.runtime;
+    //    const movieId = props.movieId;
+    //    const userFrom = props.userFrom;
+    //    const movieTitle = props.movieInfo.title;
+    //    const moviePost = props.movieInfo.backdrop_path;
+    //    const movieRunTime = props.movieInfo.runtime;
+    //    const  moviePost = props.movieInfo.backdrop_path
 
     const [FavoriteNo, setFavoriteNo] =useState(0) 
     const [Favorited, setFavorited] =useState(false)
@@ -21,7 +22,8 @@ import { useSelector } from "react-redux";
        movieId: props.movieId,
        movieTitle: props.movieInfo.original_title,
        movieImage: props.movieInfo.backdrop_path,
-       movieRunTime: props.movieInfo.runtime
+       movieRunTime: props.movieInfo.runtime,
+       moviePost: props.movieInfo.backdrop_path
      };
 
 
@@ -30,7 +32,7 @@ import { useSelector } from "react-redux";
         axios.post('/api/favorite/favoriteNo', variable)
         .then(res => {
             if(res.data.success) {
-                setFavoriteNo(res.data.subscribeNumber)
+                setFavoriteNo(res.data.favoriteNo)
             } else {
                 alert('favouriteNo not available')
             }
@@ -39,25 +41,26 @@ import { useSelector } from "react-redux";
         axios.post('/api/favorite/favorited', variable)
         .then(res => {
             if(res.data.success) {
-                setFavorited(res.data.subscribed);
+                setFavorited(res.data.favorited)
             } else {
                 alert('Failed to get favorite info')
             }
         })
        
-    }, [])
+    })
 
     const onClickFavorite = () => {
 
-        if (user.userData && !user.userData.isAuth) {
-            return alert('Login Required')
-        }
+        // if (user.userData && !user.userData.isAuth) {
+        //     return alert('Login Required')
+        // }
         if (Favorited) {
            //when already added
 
              axios.post("/api/favorite/removeFav", variable)
              .then(res => {
                if (res.data.success) {
+                   console.log(res.data.favoriteNo)
                     setFavoriteNo(FavoriteNo - 1);
                     setFavorited(!Favorited);
                 

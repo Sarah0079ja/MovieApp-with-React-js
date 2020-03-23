@@ -79,8 +79,6 @@ class RegisterModal extends Component {
     //Attempt to register
     this.props.register(newUser);
 
-    // //close modal
-    // this.toggle();
   };
 
   render() {

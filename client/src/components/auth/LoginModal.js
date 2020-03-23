@@ -69,7 +69,7 @@ class LoginModal extends Component {
     const user = {
       email,
       password
-    };
+    }
     //attempt to login
     this.props.login(user);
   };

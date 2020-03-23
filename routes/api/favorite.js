@@ -7,11 +7,11 @@ const {Favorite} = require("../../models/Favorite");
 
 router.post("/favoriteNo", (req, res) => {
   //find favorite info inside Favorite collection by movie id
-  Favorite.find
-  ({'movieId': req.body.movieId})
-    .exec((err, subscribe) => {
+
+  Favorite.find({'movieId': req.body.movieId})
+    .exec((err, favorite) => {
     if (err) return res.status(400).send(err);
-    res.status(200).json({ success: true, subscribeNo: subscribe.length });
+    res.status(200).json({ success: true, favoriteNo: favorite.length });
   })
 });
 
@@ -19,15 +19,16 @@ router.post("/favoriteNo", (req, res) => {
 
 router.post("/favorited", (req, res) => {
   //find favorite info inside Favorite collection by movie id & useFrom
+
   Favorite.find({ 'movieId': req.body.movieId, 'userFrom': req.body.userFrom })
-    .exec((err, subscribe) => {
+    .exec((err, favorite) => {
       if (err) return res.status(400).send(err);
 
       let result = false;
-      if (subscribe.length !== 0) {
+      if (favorite.length !== 0) {
         result = true
       }
-      res.status(200).json({ message: true, subscribed:result });
+      res.status(200).json({ message: true, favorited: result });
     });
 });
 
@@ -65,7 +66,7 @@ router.post("/getFavMovie", (req, res) => {
     .exec((err, favorites) => {
     if (err) return res.status(400).send(err);
     res.status(200).json({ success: true, favorites });
-  });
+  })
 });
 
 

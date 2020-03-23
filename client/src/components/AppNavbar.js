@@ -60,6 +60,7 @@ class AppNavbar extends Component {
         <Navbar color="success" dark expand="sm" className="mb-5">
           <Container>
             <NavbarBrand href="/">MovieApp</NavbarBrand>
+            <Nav className='mr-auto' style={{color: 'white'}}> <a href='/favorite' key='favorite'>Favorite</a></Nav>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>

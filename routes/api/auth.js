@@ -8,8 +8,7 @@ const auth = require("../../middleware/auth");
 //User model
 const User = require("../../models/User");
 
-
-//@route POST /auth
+//@route POST api/auth
 //@desc  Auth User
 //@access private
 
@@ -40,7 +39,7 @@ router.post("/", (req, res) => {
             token,
             user: {
               id: user.id,
-              name: user.name,
+              first_name: user.first_name,
               email: user.email
             }
           });
@@ -50,7 +49,7 @@ router.post("/", (req, res) => {
   });
 });
 
-//@route GET /auth/user
+//@route GET api/auth/user
 //@desc  GET user data
 //@access private
 router.get("/user", auth, (req, res) => {

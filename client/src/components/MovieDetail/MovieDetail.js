@@ -2,14 +2,12 @@ import React, {useEffect, useState} from 'react'
 import MainImage from "../LandingPage/Sections/MainImage"
 import GridCard from "../LandingPage/Sections/GridCard"
 import { Descriptions, Button } from "antd";
-import favorite from'./Sections/Favorite'
 
 import {
   API_URL,
   API_KEY,
-  IMAGE_BASE_URL,
-  IMAGE_SIZE,
-  POSTER_SIZE
+  IMAGE_BASE_URL
+  
 } from "../Config";
 import Favorite from './Sections/Favorite';
 
@@ -37,7 +35,7 @@ const MovieDetail = (props) => {
                     setCrews(response.cast)})
             })
 
-    }, [])
+    })
 
     const handleClick = () => {
         setActorToggle(!ActorToggle)
@@ -59,7 +57,7 @@ const MovieDetail = (props) => {
             <Favorite userFrom={localStorage.getItem('userId')} movieId={movieId} movieInfo={Movie}/>
           </div>
 
-          <Descriptions title="Movie Info" bordered>
+          <Descriptions title="Movie Info">
             <Descriptions.Item label="Title">
               {Movie.original_title}
             </Descriptions.Item>

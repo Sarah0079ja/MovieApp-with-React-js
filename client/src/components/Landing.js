@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from "./Config";
-import {Typography} from 'antd';
+// import {Typography} from 'antd';
 import GridCard from './LandingPage/Sections/GridCard'
-import MovieDetail from './MovieDetail/MovieDetail'
+// import MovieDetail from './MovieDetail/MovieDetail'
 
 import MainImage from "./LandingPage/Sections/MainImage";
+ 
 
- const {Title} = Typography
-// import {faCode} from 'react-icons/fa'
 
 const Landing = ()  => {
    const [Movies, setMovies] = useState([])
    const [CurrentPage, setCurrentPage] = useState([0])
 
   useEffect(() => {
-    const endpoint =  `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+    const endpoint =  `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     fetchMovies(endpoint)
   }, [])
 

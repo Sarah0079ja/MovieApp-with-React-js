@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose= require('mongoose')
 const Schema = mongoose.Schema;
 
 const favoriteSchema = mongoose.Schema({
@@ -8,24 +8,19 @@ const favoriteSchema = mongoose.Schema({
   },
 
   movieId: {
-    type: String,
-    
+    type: String
   },
 
   movieTitle: {
-    type: String,
-    
+    type: String
   },
+
   movieImage: {
-    type: String,
-    
+    type: String
   },
   movieRunTime: {
-    type: String,
-    
+    type: String
   }
-
- 
 });
 
-module.exports = Favorite = mongoose.model("favorite", favoriteSchema);
+const Favorite = mongoose.model("Favorite", favoriteSchema)

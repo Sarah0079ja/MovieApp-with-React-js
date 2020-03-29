@@ -9,11 +9,13 @@ const User = require("../../models/User");
 
 
 //GET
-router.get('/', (req, res) => {
-  User.find()
+router.get('/', (req, res)  => {
+ User.find()
   .sort({date: -1})
-  .then(users => res.json(users))
-});
+  .then(users => res.json(users)) 
+  
+})
+  
 
 
 //@route POST /users

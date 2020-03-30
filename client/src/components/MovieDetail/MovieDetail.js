@@ -3,7 +3,7 @@ import MainImage from "../LandingPage/Sections/MainImage";
 import GridCard from "../LandingPage/Sections/GridCard";
 import { Descriptions, Button } from "antd";
 
-import { API_URL, API_KEY, IMAGE_BASE_URL } from "../Config";
+import { API_URL, API_KEY, IMAGE_BASE_URL } from "../Calls";
 import Favorite from "./Sections/Favorite";
 
 const MovieDetail = props => {

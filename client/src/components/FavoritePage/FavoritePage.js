@@ -3,7 +3,7 @@ import { Typography, Popover } from "antd";
 import axios from "axios";
 import "./Favorite.css";
 import { useSelector } from "react-redux";
-import { IMAGE_BASE_URL, POSTER_SIZE } from "../Config";
+import { IMAGE_BASE_URL, POSTER_SIZE } from "../Calls";
 
 const { Title } = Typography;
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from "./Config";
+import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from "./Calls";
 // import {Typography} from 'antd';
 import GridCard from './LandingPage/Sections/GridCard'
 // import MovieDetail from './MovieDetail/MovieDetail'

@@ -26,12 +26,12 @@ const { Title } = Typography;
               style={{
                 postion: "absolute",
                 maxWidth: "500px",
-                bottom: "2rem",
+                bottom: "1rem",
                 marginLeft: "2rem"
               }}
             >
               <Title style={{ color: "white" }} level={2}>
-                Title
+                {props.title}
               </Title>
               <p style={{ color: "white", fontSize: "1rem" }}>{props.text}</p>
             </div>

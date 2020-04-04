@@ -4,25 +4,42 @@ const bodyParser = require('body-parser');
 const config = require("config");
 const path = require('path')
 
+const cors = require("cors")
+require('dotenv').config()
+
 const app = express(); 
 
 //middleware bodyparser
+app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 
 
 // db config
-const db = config.get('mongoURI');
+// const db = config.get('mongoURI');
   
-// connect mongo  
-mongoose
-  .connect(db, {  
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
+// // connect mongo  
+// mongoose
+//   .connect(db, {  
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useCreateIndex: true
+//   })
+//   .then(() => console.log("Mongodb connected..."))
+//   .catch(err => console.log(err));
+
+
+mongoose.connect(
+  "mongodb+srv://MovieDb:movie01@cluster0-9n9ja.mongodb.net/test?retryWrites=true&w=majority",
+  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true  }
+);
+mongoose.connection
+  .once("open", function() {
+    console.log("MongoDb connected...");
   })
-  .then(() => console.log("Mongodb connected..."))
-  .catch(err => console.log(err));
+  .on("error", function(error) {
+    console.log("Error is: ", error);
+  });
 
   
 //use routes

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE } from "./Calls";
-// import {Typography} from 'antd';
+
 import GridCard from './LandingPage/Sections/GridCard'
-// import MovieDetail from './MovieDetail/MovieDetail'
+
 
 import MainImage from "./LandingPage/Sections/MainImage";
  
@@ -13,7 +13,8 @@ const Landing = ()  => {
    const [CurrentPage, setCurrentPage] = useState([0])
 
   useEffect(() => {
-    const endpoint =  `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+    const endpoint = `https://api.themoviedb.org/3/movie/popular?api_key=1b5db8d5068d9319c006d7b0385d2f65&language=en-US&page=1`;                    
+      //  `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     fetchMovies(endpoint)
   }, [])
 

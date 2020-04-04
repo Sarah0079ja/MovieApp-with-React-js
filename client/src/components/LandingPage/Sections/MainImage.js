@@ -26,7 +26,7 @@ const { Title } = Typography;
               style={{
                 postion: "absolute",
                 maxWidth: "500px",
-                bottom: "1rem",
+                bottom: "2rem",
                 marginLeft: "2rem"
               }}
             >

@@ -27,7 +27,7 @@ class App extends Component {
           <AppNavbar />
           <div
             className="App"
-            style={{ paddingTop: "75px", minHeight: "calc(100vh -80px)" }}
+            style={{ paddingTop: "0px", minHeight: "calc(100vh -80px)" }}
           >
             <Switch>
               <Route exact path="/" component={Landing} />

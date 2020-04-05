@@ -84,7 +84,7 @@ const Landing = ()  => {
         
       </div>
     );
-//  {"WARNING": "NODE_ENV value of 'production' did not match any deployment config file names"} 
+//  
 }
 
 export default Landing;

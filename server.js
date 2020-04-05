@@ -16,7 +16,10 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 
 // db config
-const db = config.get("MONGO_URI","JWT_SECRET");
+const db = config.get(
+  "mongodb+srv://MovieDb:movie01@cluster0-9n9ja.mongodb.net/test?retryWrites=true&w=majority",
+  "Fh_JwtSecret"
+);
   
 
 // connect mongo  

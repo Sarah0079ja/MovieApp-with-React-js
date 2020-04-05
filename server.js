@@ -16,10 +16,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 
 // db config
-const db = config.get(
-  "MONGO_URI",
-  "JWT_SECRET"
-);
+const db = config.get( "MONGO_URI");
   
 
 // connect mongo  

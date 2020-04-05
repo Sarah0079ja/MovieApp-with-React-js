@@ -49,7 +49,7 @@ const Landing = ()  => {
 
         {/* //body */}
         <div style={{ width: "85%", margin: "1rem auto" }}>
-          <h2 level={2}>Movies by latest</h2>
+          <h2 level={2}>Latest Movies</h2>
 
           <hr />
           {/* movie cards */}

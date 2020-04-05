@@ -16,30 +16,31 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 
 // db config
-// const db = config.get('mongoURI');
+const db = config.get('MONGO_URI','JWT_SECRET');
   
-// // connect mongo  
-// mongoose
-//   .connect(db, {  
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true
-//   })
-//   .then(() => console.log("Mongodb connected..."))
-//   .catch(err => console.log(err));
 
-
-mongoose.connect(
-  "mongodb+srv://MovieDb:movie01@cluster0-9n9ja.mongodb.net/test?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true  }
-);
-mongoose.connection
-  .once("open", function() {
-    console.log("MongoDb connected...");
+// connect mongo  
+mongoose
+  .connect(db, {  
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
   })
-  .on("error", function(error) {
-    console.log("Error is: ", error);
-  });
+  .then(() => console.log("Mongodb connected..."))
+  .catch(err => console.log(err));
+
+
+// mongoose.connect(
+//   "mongodb+srv://MovieDb:movie01@cluster0-9n9ja.mongodb.net/test?retryWrites=true&w=majority",
+//   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true  }
+// );
+// mongoose.connection
+//   .once("open", function() {
+//     console.log("MongoDb connected...");
+//   })
+//   .on("error", function(error) {
+//     console.log("Error is: ", error);
+//   });
 
   
 //use routes

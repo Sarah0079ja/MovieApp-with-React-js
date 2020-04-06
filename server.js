@@ -16,12 +16,12 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 
 // db config
-const db = config.get( "MONGO_URI");
+// const db = process.env.MONGO_URI;
   
-
 // connect mongo  
 mongoose
-  .connect(db, {  
+  .connect("mongodb+srv://MovieDb:movie01@cluster0-9n9ja.mongodb.net/test?retryWrites=true&w=majority"
+  , {  
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true

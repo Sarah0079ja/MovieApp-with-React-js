@@ -49,7 +49,7 @@ function FavoritePage() {
     const content = (
       <div>
         {favorite.moviePost ? (
-          <img src={`${IMAGE_BASE_URL}${POSTER_SIZE}${favorite.moviePost}`} />
+          <img src={`${IMAGE_BASE_URL}${POSTER_SIZE}${favorite.moviePost}`} alt=""/>
         ) : (
           "no image"
         )}

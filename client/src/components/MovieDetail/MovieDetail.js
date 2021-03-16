@@ -27,6 +27,7 @@ const MovieDetail = props => {
             setCasts(response.cast);
           });
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleClick = () => {
@@ -82,7 +83,7 @@ const MovieDetail = props => {
           </Descriptions.Item>
         </Descriptions>
 
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", marginTop:'10px',}}>
           <Button onClick={handleClick}>Toggle Actor View</Button>
         </div>
 

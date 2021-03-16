@@ -35,7 +35,7 @@ import axios from 'axios'
           alert('Failed to get favorite info')
         }
       })
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 const  onClickFavorite = () => {

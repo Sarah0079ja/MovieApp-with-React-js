@@ -14,28 +14,28 @@
   "author": "Sarah",
   "license": "MIT",
   "dependencies": {
-    "@ant-design/icons": "^4.0.3",
+    "@ant-design/icons": "^4.6.4",
     "antd-data-table": "^1.0.1",
-    "axios": "^0.21.1",
-    "bcrypt": "^5.0.0",
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "concurrently": "^5.1.0",
-    "config": "^3.3.0",
+    "concurrently": "^6.2.1",
+    "config": "^3.3.6",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "env": "0.0.2",
     "express": "^4.17.1",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^3.2.3",
     "json-web-token": "^3.2.0",
     "jsonwebtoken": "^8.5.1",
-    "jwt-decode": "^2.2.0",
-    "mongoose": "^5.8.3",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^6.0.7",
     "path": "^0.12.7",
-    "react-icons": "^3.9.0"
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.13"
   },
   "engines": {
     "node": "12.14.0",

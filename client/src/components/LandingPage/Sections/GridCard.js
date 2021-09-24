@@ -4,7 +4,7 @@ import {Col} from 'antd'
 const GridCard = (props) => {
     if (props.actor) {
         return (
-          <Col lg={6} md={8} xs={24}>
+          <Col lg={3} md={8} xs={24}>
             <div style={{ position: "relative" }}>
             
                 <img
@@ -18,7 +18,7 @@ const GridCard = (props) => {
         );
     } else {
          return (
-           <Col lg={6} md={8} xs={24}>
+           <Col lg={3} md={8} xs={24}>
              <div style={{ position: "relative" }}>
                <a href={`/movie/${props.movieId}`}>
                  <img

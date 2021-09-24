@@ -22,9 +22,9 @@ app.use(bodyParser.urlencoded({extended: false}))
 mongoose
   .connect("mongodb+srv://MovieDb:movie01@cluster0-9n9ja.mongodb.net/test?retryWrites=true&w=majority"
   , {  
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
+    // useCreateIndex: true
   })
   .then(() => console.log("Mongodb connected..."))
   .catch(err => console.log(err));

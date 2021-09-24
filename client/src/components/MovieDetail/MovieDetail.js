@@ -83,7 +83,7 @@ const MovieDetail = props => {
           </Descriptions.Item>
         </Descriptions>
 
-        <div style={{ display: "flex", justifyContent: "center", marginTop:'10px',}}>
+        <div style={{ display: "flex", justifyContent: "center", marginTop:'20px', marginBottom: '20px'}}>
           <Button onClick={handleClick}>Toggle Actor View</Button>
         </div>
 
@@ -96,7 +96,7 @@ const MovieDetail = props => {
                 className=""
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(4, 1fr",
+                  gridTemplateColumns: "repeat(5, 1fr",
                   gridGap: "1rem"
                 }}
               >

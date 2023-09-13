@@ -58,10 +58,10 @@ class AppNavbar extends Component {
 
     return (
       <div>
-        <Navbar color="success" dark expand="sm" className="mb-5">
+        <Navbar color="danger" dark expand="sm" className="">
           <Container>
             <NavbarBrand href="/">MovieApp</NavbarBrand>
-            <Nav className='mr-auto' style={{color: 'white'}}> <a href='/favorite' key='favorite'>Favorite</a></Nav>
+             {/* <Nav className='mr-auto' color='blue'> <a href='/favorite' key='favorite'></a></Nav> */}
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>

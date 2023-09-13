@@ -38,7 +38,7 @@ const Landing = ()  => {
   }
 
     return (
-      <div style={{ width: "100%", margin: 0 }}>
+      <div style={{ width: "100%", margin: 0, color: 'black' }}>
         {Movies[0] && (
           <MainImage
             image={`${IMAGE_BASE_URL}w1280${Movies[0].backdrop_path &&
@@ -49,7 +49,7 @@ const Landing = ()  => {
         )}
 
         {/* //body */}
-        <div style={{ width: "85%", margin: "1rem auto" }}>
+        <div style={{ width: "85%", margin: "1rem auto", color: 'red' }}>
           <h2 level={2}>Latest Movies</h2>
 
           <hr />

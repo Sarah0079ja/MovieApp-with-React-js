@@ -77,7 +77,7 @@ class LoginModal extends Component {
   render() {
     return (
       <div>
-        <NavLink onClick={this.toggle} href="#">
+        <NavLink  style={{color: 'white'}} onClick={this.toggle} href="#">
           Login
         </NavLink>
 
@@ -108,7 +108,7 @@ class LoginModal extends Component {
                 onChange={this.onChange}
               />
 
-              <Button color="dark" style={{ marginTop: "2rem" }} block>
+              <Button color="dark" style={{ marginTop: "2rem"}} block>
                 Login
               </Button>
             </Form>
